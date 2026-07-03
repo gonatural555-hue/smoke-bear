@@ -19,7 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-gold-aged/20 bg-black-smoke/95 backdrop-blur">
       <div className="mx-auto flex max-w-site items-center justify-between gap-4 px-5 py-3 lg:px-10">
         <Link href="/" className="group flex items-center gap-3">
-          <SiteLogo className="h-16 w-16" />
+          <SiteLogo className="h-16 w-16" framed={false} />
           <span className="hidden text-xs uppercase tracking-[0.32em] text-muted-text group-hover:text-cream xl:block">
             The Bear Smoke
           </span>
@@ -56,10 +56,12 @@ export function Header() {
   );
 }
 
-function SiteLogo({ className = "h-16 w-16" }: { className?: string }) {
+function SiteLogo({ className = "h-16 w-16", framed = true }: { className?: string; framed?: boolean }) {
   return (
     <span
-      className={`block overflow-hidden rounded-full border-2 border-copper bg-black-smoke shadow-ember ${className}`}
+      className={`block overflow-hidden ${
+        framed ? "rounded-full border-2 border-copper bg-black-smoke shadow-ember" : ""
+      } ${className}`}
       aria-label="The Bear Smoke"
     >
       <Image src="/references/logo.png" alt="The Bear Smoke" width={160} height={160} className="h-full w-full object-cover" priority />

@@ -6,7 +6,7 @@ export default function CheckoutPage() {
   return (
     <>
       <PageSection>
-        <div className="mb-10 rounded-[3px] bg-cover bg-center p-8 shadow-ember md:p-14" style={{ backgroundImage: "linear-gradient(90deg, rgba(9,8,7,.94), rgba(9,8,7,.45)), url('/references/checkout.png')" }}>
+        <div className="mb-10 rounded-[3px] border border-gold-aged/20 bg-black-smoke p-8 shadow-ember md:p-14">
           <p className="nav-text text-xs text-copper">Carrito / Checkout / Confirmación</p>
           <h1 className="display-title mt-4 text-5xl text-cream md:text-7xl">Finalizar pedido</h1>
           <p className="mt-4 max-w-xl text-muted-text">Estás a un paso de disfrutar una experiencia The Bear Smoke.</p>
