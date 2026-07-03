@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { blogPosts, products, smokeBoxes, testimonials, type Product } from "@/lib/data";
+import { MobileMenu } from "@/components/mobile-menu";
 
 type Tone = "dark" | "paper";
 
@@ -50,6 +51,7 @@ export function Header() {
               3
             </span>
           </Link>
+          <MobileMenu />
         </div>
       </div>
     </header>
