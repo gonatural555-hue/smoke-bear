@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --charcoal: #0d0d0c;
+  --charcoal-soft: #151311;
+  --black-smoke: #090807;
+  --cream: #f1e4cf;
+  --cream-soft: #e8d8be;
+  --paper: #efe2cb;
+  --copper: #b65a32;
+  --copper-dark: #8f3f22;
+  --burnt-orange: #d16035;
+  --wood: #5b3826;
+  --walnut: #2a1b14;
+  --bordo: #4a1412;
+  --petrol: #0e4c55;
+  --petrol-dark: #07343b;
+  --gold-aged: #b58a4a;
+  --muted-text: #b9a994;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(182, 90, 50, 0.12), transparent 34rem),
+    linear-gradient(180deg, var(--charcoal) 0%, var(--black-smoke) 100%);
+  color: var(--cream);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--copper);
+  color: var(--cream);
+}
+
+.paper-texture {
+  background:
+    radial-gradient(circle at 16% 20%, rgba(91, 56, 38, 0.08), transparent 18rem),
+    radial-gradient(circle at 92% 10%, rgba(181, 138, 74, 0.10), transparent 20rem),
+    linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
+  color: var(--charcoal);
+}
+
+.charcoal-panel {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(182, 90, 50, 0.15), transparent 22rem),
+    radial-gradient(circle at 90% 0%, rgba(14, 76, 85, 0.16), transparent 28rem),
+    linear-gradient(180deg, var(--charcoal-soft), var(--black-smoke));
+}
+
+.noise-overlay {
+  position: relative;
+  isolation: isolate;
+}
+
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mix-blend-mode: overlay;
+}
+
+.display-title {
+  font-family: var(--font-rye), serif;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.nav-text {
+  font-family: var(--font-oswald), sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vintage-border {
+  border: 1px solid rgba(181, 138, 74, 0.34);
+}
+
+.image-grain {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(9, 8, 7, 0.03), rgba(9, 8, 7, 0.42)),
+    radial-gradient(circle at 60% 35%, rgba(241, 228, 207, 0.08), transparent 18rem);
+}
+
+.image-grain > * {
+  position: relative;
+  z-index: 2;
+}
