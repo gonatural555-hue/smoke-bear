@@ -10,30 +10,38 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    name: "Bondiola Smoke",
+    name: "Brisket",
+    slug: "brisket-smoke",
+    price: "$24.900",
+    category: "Vacuno",
+    description: "La mejor carne vacuna, ahumada lentamente 10 horas. Sabor profundo y textura que se deshace.",
+    image: "/references/productos/brisket-smoke.png",
+    tag: "Más vendido",
+  },
+  {
+    name: "Ribs",
+    slug: "ribs-smoke",
+    price: "$17.900",
+    category: "Ribs",
+    description: "Costillitas glaseadas con salsa BBQ, ahumadas a baja temperatura hasta quedar tiernas.",
+    image: "/references/productos/ribs-smoke.png",
+  },
+  {
+    name: "Pulled Pork",
+    slug: "pulled-pork-smoke",
+    price: "$15.900",
+    category: "Cerdo",
+    description: "Cerdo desmenuzado, 8 horas de cocción. Perfecto para sándwiches, tacos o solo.",
+    image: "/references/productos/pulled-pork-smoke.png",
+    tag: "Nuevo",
+  },
+  {
+    name: "Bondiola Ahumada",
     slug: "bondiola-smoke",
     price: "$15.900",
     category: "Ahumados",
     description: "Bondiola de cerdo ahumada lentamente con rub de la casa.",
     image: "/references/productos/bondiola-smoke.png",
-    tag: "Más vendido",
-  },
-  {
-    name: "Ribs Smoke",
-    slug: "ribs-smoke",
-    price: "$17.900",
-    category: "Ribs",
-    description: "Costillitas de cerdo ahumadas a baja temperatura.",
-    image: "/references/productos/ribs-smoke.png",
-  },
-  {
-    name: "Roast Smoke",
-    slug: "roast-smoke",
-    price: "$18.900",
-    category: "Roast",
-    description: "Roast beef ahumado, jugoso y listo para servir.",
-    image: "/references/productos/roast-smoke.png",
-    tag: "Nuevo",
   },
   {
     name: "Alitas Smoke",
@@ -51,15 +59,6 @@ export const products: Product[] = [
     description: "Chorizo ahumado con toque justo de especias.",
     image: "/references/productos/chorizo-smoke.png",
   },
-  {
-    name: "Pastrón",
-    slug: "pastron",
-    price: "$19.900",
-    category: "Cortes",
-    description: "Pastrón ahumado, curado y especiado al estilo Texas.",
-    image: "/references/catalogo.png",
-    tag: "Edición limitada",
-  },
 ];
 
 export const smokeBoxes = [
@@ -68,14 +67,14 @@ export const smokeBoxes = [
     price: "$59.900",
     serves: "4 a 6 personas",
     image: "/references/smoke-box-opciones.png",
-    items: ["2 cortes de carne ahumada", "1 condimento + 1 salsa BBQ", "Viruta de madera", "Instrucciones de regeneración"],
+    items: ["2 cortes de carne ahumada", "1 condimento + 1 salsa BBQ", "Envasado al vacío", "Listo en 15 minutos"],
   },
   {
     name: "Smoke Box Familiar",
     price: "$89.900",
     serves: "8 a 10 personas",
     image: "/references/smoke-box-hero.png",
-    items: ["3 cortes de carne ahumada", "2 condimentos + 2 salsas BBQ", "Viruta de madera", "Tarjeta personalizada"],
+    items: ["3 cortes de carne ahumada", "2 condimentos + 2 salsas BBQ", "Envasado al vacío", "Tarjeta personalizada"],
     featured: true,
   },
   {
@@ -96,10 +95,10 @@ export const blogPosts = [
     href: "/blog/guia-ahumado",
   },
   {
-    title: "Bondiola ahumada al estilo Texas",
+    title: "Brisket ahumado al estilo Texas",
     category: "Recetas",
-    excerpt: "Jugosa, tierna y llena de sabor. El clásico que nunca falla.",
-    image: "/references/productos/bondiola-smoke.png",
+    excerpt: "10 horas de cocción para lograr sabor profundo y ternura intensa.",
+    image: "/references/productos/brisket-smoke.png",
     href: "/blog/guia-ahumado",
   },
   {
@@ -121,12 +120,12 @@ export const blogPosts = [
 export const testimonials = [
   {
     name: "Martín González",
-    location: "Barrio Smoke",
-    quote: "La bondiola es increíble, súper tierna y con sabor ahumado espectacular.",
+    location: "Palermo, CABA",
+    quote: "El brisket es increíble, súper tierno y con sabor ahumado espectacular. Listo en 15 minutos.",
   },
   {
     name: "Florencia L.",
-    location: "City Bell",
+    location: "Belgrano, CABA",
     quote: "La Smoke Box llegó impecable. Abrís, calentás y parece hecho en casa.",
   },
   {
@@ -155,7 +154,7 @@ export const orders = [
     id: "#S1202710",
     date: "18 de Junio, 2024",
     status: "Enviado",
-    items: "Ribs Smoke + Rub Original",
+    items: "Ribs + Brisket",
     total: "$49.900",
   },
   {

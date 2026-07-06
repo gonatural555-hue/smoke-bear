@@ -38,7 +38,7 @@ export default function CheckoutPage() {
                 ))}
               </div>
               <p className="mt-4 rounded-[3px] bg-cream px-4 py-3 text-sm text-walnut/70">
-                Envíos en La Plata y alrededores. Consultá cobertura.
+                Envíos a todo Buenos Aires. Consultá cobertura.
               </p>
             </CheckoutPanel>
 
@@ -69,8 +69,8 @@ export default function CheckoutPage() {
             <h2 className="display-title text-3xl">Resumen del pedido</h2>
             <div className="mt-6 space-y-5">
               {[
-                ["Bondiola Smoke", "$24.900", "1 kg"],
-                ["Ribs Smoke", "$29.900", "800 g"],
+                ["Brisket", "$24.900", "1 kg"],
+                ["Ribs", "$17.900", "800 g"],
                 ["Smoke Box Familiar", "$89.900", "Ideal para 4 a 6 personas"],
               ].map(([name, price, meta], index) => (
                 <div key={name} className="grid grid-cols-[74px_1fr_auto] gap-4 border-b border-walnut/10 pb-4">

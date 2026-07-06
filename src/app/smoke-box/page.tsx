@@ -16,7 +16,7 @@ export default function SmokeBoxPage() {
       <Hero
         eyebrow="Experiencias para regalar o compartir"
         title="Smoke Box para compartir"
-        subtitle="La experiencia Texas BBQ adaptada a la tradición argentina. Todo listo para abrir, calentar y disfrutar."
+        subtitle="La experiencia Texas BBQ adaptada a la tradición argentina. Envasado al vacío, listo en 15 minutos."
         image="/references/banner-01.png"
       >
         <CTAButton href="/smoke-box/opciones">Crear mi Smoke Box</CTAButton>

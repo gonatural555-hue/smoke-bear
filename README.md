@@ -2,6 +2,9 @@
 
 Demo visual en Next.js para presentar en Vercel una marca argentina de carnes ahumadas artesanales con estética Texas BBQ premium.
 
+- Instagram: [@smoke120ahumados](https://www.instagram.com/smoke120ahumados/)
+- WhatsApp: [+54 11 5573 0406](https://wa.me/541155730406)
+
 ## Cómo correr el proyecto
 
 ```bash
@@ -29,6 +32,7 @@ npm run build
 
 - `/` Home
 - `/productos` Catálogo / tienda visual
+- `/producto/brisket-smoke` Página de producto
 - `/producto/bondiola-smoke` Página de producto
 - `/smoke-box` Landing Smoke Box
 - `/smoke-box/opciones` Comparativa de Smoke Box
@@ -74,6 +78,10 @@ public/references/mi-cuenta.png
 public/references/mis-pedidos.png
 public/references/checkout.png
 public/references/logo.png
+public/references/logo.svg
+public/references/productos/brisket-smoke.png
+public/references/productos/ribs-smoke.png
+public/references/productos/pulled-pork-smoke.png
 ```
 
 La demo usa esos paths como apoyo visual dentro de componentes reales. Si algún archivo falta, los bloques siguen mostrando fondos con gradients oscuros.

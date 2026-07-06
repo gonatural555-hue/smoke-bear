@@ -18,14 +18,14 @@ export default function Home() {
   return (
     <>
       <Hero
-        eyebrow="Fuego lento · Sabor real · Hecho en Argentina"
+        eyebrow={`${brand.accolades[0]} · ${brand.tagline}`}
         title="Ahumados argentinos con alma de Texas BBQ"
-        subtitle="Carnes ahumadas lentamente, listas para compartir en juntadas, asados y momentos especiales."
+        subtitle="Carnes ahumadas lentamente, envasadas al vacío y listas para disfrutar en 15 minutos. Envíos a todo Buenos Aires."
         image="/references/BANNER-HOME.png"
       >
-        <CTAButton href="/productos">Ver productos</CTAButton>
-        <CTAButton href="/smoke-box" variant="secondary">
-          Armar mi Smoke Box
+        <CTAButton href={brand.whatsapp}>Pedir por WhatsApp</CTAButton>
+        <CTAButton href="/productos" variant="secondary">
+          Ver productos
         </CTAButton>
       </Hero>
 
@@ -37,13 +37,13 @@ export default function Home() {
               tone="paper"
               eyebrow="Nuestra filosofía"
               title="Fuego lento. Sabor real. Hecho en Argentina."
-              subtitle={`En ${brand.name} combinamos la tradición del Texas BBQ con nuestra parrilla argentina. Seleccionamos cortes de calidad, los ahumamos con maderas nobles durante horas y los preparamos para que vos solo tengas que disfrutar.`}
+              subtitle={`En ${brand.name} combinamos la tradición del Texas BBQ con nuestra parrilla argentina. Seleccionamos cortes de calidad, los ahumamos con maderas nobles durante horas, los envasamos al vacío y los preparamos para que vos solo tengas que calentar y disfrutar en 15 minutos.`}
             />
             <CTAButton href="/blog/guia-ahumado" variant="petrol" className="mt-6">
               Conocé nuestra historia
             </CTAButton>
           </div>
-          <VisualImage src="/references/pdp.png" className="min-h-[360px]" label="Bondiola ahumada a cuchillo" />
+          <VisualImage src="/references/pdp.png" className="min-h-[360px]" label="Brisket ahumado a cuchillo" />
         </div>
       </PageSection>
 

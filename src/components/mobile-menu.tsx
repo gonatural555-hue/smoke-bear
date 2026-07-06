@@ -6,7 +6,7 @@ import { useState } from "react";
 const mobileLinks = [
   ["Inicio", "/"],
   ["Productos", "/productos"],
-  ["Bondiola Smoke", "/producto/bondiola-smoke"],
+  ["Brisket", "/producto/brisket-smoke"],
   ["Smoke Box", "/smoke-box"],
   ["Opciones Smoke Box", "/smoke-box/opciones"],
   ["Blog", "/blog"],

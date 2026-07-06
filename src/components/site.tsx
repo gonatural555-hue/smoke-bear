@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-gold-aged/20 bg-black-smoke/95 backdrop-blur">
       <div className="mx-auto flex max-w-site items-center justify-between gap-4 px-5 py-3 lg:px-10">
         <Link href="/" className="group flex items-center gap-3">
-          <SiteLogo className="h-16 w-16" framed={false} />
+          <SiteLogo className="h-16 w-16" framed />
           <span className="hidden text-[10px] uppercase leading-tight tracking-[0.22em] text-muted-text group-hover:text-cream xl:block">
             {brand.name}
           </span>
@@ -40,7 +40,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <CTAButton href="/checkout" size="sm">
+          <CTAButton href={brand.whatsapp} size="sm">
             Hacer pedido
           </CTAButton>
           <CTAButton href="/mi-cuenta" variant="secondary" size="sm" className="hidden sm:inline-flex">
@@ -67,7 +67,7 @@ function SiteLogo({ className = "h-16 w-16", framed = true }: { className?: stri
       } ${className}`}
       aria-label={brand.name}
     >
-      <Image src="/references/logo.png" alt={brand.name} width={160} height={160} className="h-full w-full object-cover" priority />
+      <Image src="/references/logo.png" alt={brand.name} width={160} height={160} className="h-full w-full object-contain p-1" priority />
     </span>
   );
 }
@@ -79,7 +79,7 @@ export function Footer() {
         <div>
           <SiteLogo className="mb-4 h-20 w-20" />
           <p className="max-w-sm text-sm leading-7 text-muted-text">
-            Ahumados argentinos con alma de Texas BBQ. Hecho para compartir alrededor del fuego.
+            {brand.tagline}. {brand.accolades.join(" · ")}. Envíos a todo Buenos Aires.
           </p>
         </div>
         <div className="grid gap-8 sm:grid-cols-4">
@@ -89,9 +89,13 @@ export function Footer() {
           <div>
             <h3 className="nav-text mb-4 text-xs text-cream">Hablá con nosotros</h3>
             <p className="space-y-2 text-sm text-muted-text">
-              <span className="block">221 123 4567</span>
-              <span className="block">{brand.instagram}</span>
-              <span className="block">La Plata, Buenos Aires</span>
+              <a href={brand.whatsapp} className="block transition hover:text-copper">
+                {brand.phone}
+              </a>
+              <a href={brand.instagramUrl} target="_blank" rel="noreferrer" className="block transition hover:text-copper">
+                {brand.instagram}
+              </a>
+              <span className="block">{brand.location}</span>
             </p>
           </div>
         </div>
@@ -241,7 +245,7 @@ export function ProductCard({ product, compact = false }: { product: Product; co
         <p className="mt-3 min-h-12 text-sm leading-6 text-muted-text">{product.description}</p>
         <div className="mt-5 flex items-center justify-between gap-4">
           <strong className="font-nav text-lg text-cream">{product.price}</strong>
-          <CTAButton href={product.slug === "bondiola-smoke" ? "/producto/bondiola-smoke" : "/checkout"} size="sm">
+          <CTAButton href={product.slug === "brisket-smoke" ? "/producto/brisket-smoke" : product.slug === "bondiola-smoke" ? "/producto/bondiola-smoke" : "/checkout"} size="sm">
             Agregar
           </CTAButton>
         </div>
@@ -368,9 +372,9 @@ export function Hero({
 
 export function FeatureGrid() {
   const features = [
-    ["Ahumado artesanal", "Maderas argentinas y cocción lenta."],
-    ["Envasado al vacío", "Listo para conservar sabor y jugosidad."],
+    ["Envasado al vacío", "Listo para disfrutar en 15 minutos."],
     ["Hecho en Argentina", "Texas BBQ adaptado a nuestra mesa."],
+    ["Campeón Federal 2024", "Calidad reconocida a nivel nacional."],
     ["Listo para compartir", "Regenerás, servís y disfrutás."],
   ];
 
