@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald, Rye } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components/site";
+import { brand } from "@/lib/brand";
 
 const rye = Rye({
   subsets: ["latin"],
@@ -20,9 +21,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The Bear Smoke | Ahumados argentinos",
-  description:
-    "Demo visual de The Bear Smoke: carnes ahumadas artesanales estilo Texas BBQ hecho por argentinos.",
+  title: `${brand.name} | ${brand.tagline}`,
+  description: `Demo visual de ${brand.name}: ${brand.description}`,
 };
 
 export default function RootLayout({

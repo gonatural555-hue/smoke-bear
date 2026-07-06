@@ -7,6 +7,7 @@ import {
   TrustBadge,
   VisualImage,
 } from "@/components/site";
+import { brand } from "@/lib/brand";
 
 const menu = ["Inicio", "Mis pedidos", "Mis Smoke Box", "Suscripciones", "Favoritos", "Direcciones", "Datos personales", "Medios de pago"];
 
@@ -18,7 +19,7 @@ export default function MiCuentaPage() {
           <div className="flex flex-wrap items-center gap-6">
             <div className="h-28 w-28 rounded-full border-2 border-copper bg-paper" />
             <div>
-              <p className="nav-text text-xs text-copper">Cliente desde 2025 · Nivel Smoke Lover</p>
+              <p className="nav-text text-xs text-copper">Cliente desde 2025 · Nivel {brand.memberLevel}</p>
               <h1 className="display-title mt-3 text-4xl text-cream md:text-6xl">Hola, Martín</h1>
               <p className="mt-2 text-muted-text">Qué bueno verte nuevamente.</p>
             </div>
@@ -55,7 +56,7 @@ export default function MiCuentaPage() {
               <VisualImage src="/references/pdp.png" className="min-h-64 rounded-none border-0" />
               <div className="p-7">
                 <p className="nav-text text-xs text-copper">Último pedido</p>
-                <h2 className="display-title mt-3 text-3xl">Pedido #TB2847</h2>
+                <h2 className="display-title mt-3 text-3xl">Pedido #{brand.orderPrefix}2847</h2>
                 <p className="mt-3 text-sm text-walnut/75">17 de Julio, 2024 · Smoke Box Clásica · $59.900</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <CTAButton href="/mi-cuenta/pedidos" variant="petrol">Ver pedido</CTAButton>
@@ -72,7 +73,7 @@ export default function MiCuentaPage() {
                 </div>
               </div>
               <div className="vintage-border rounded-[3px] bg-petrol-dark p-8">
-                <h2 className="display-title text-3xl text-cream">Tu suscripción Smoke Club</h2>
+                <h2 className="display-title text-3xl text-cream">Tu suscripción {brand.clubName}</h2>
                 <ul className="mt-5 space-y-3 text-sm text-cream-soft/85">
                   <li>✦ 10% off en todos tus pedidos</li>
                   <li>✦ Acceso anticipado a lanzamientos</li>
@@ -88,7 +89,7 @@ export default function MiCuentaPage() {
             <div className="grid gap-4 md:grid-cols-3">
               <TrustBadge title="Acceso anticipado" text="Enterate primero de lanzamientos." />
               <TrustBadge title="Descuentos exclusivos" text="Beneficios especiales para miembros." />
-              <TrustBadge title="Recetas privadas" text="Técnicas y tips de The Bear Smoke." />
+              <TrustBadge title="Recetas privadas" text={`Técnicas y tips de ${brand.name}.`} />
             </div>
 
             <SectionTitle align="left" eyebrow="Recomendado para vos" title="Sumá algo al próximo pedido" />

@@ -12,6 +12,7 @@ import {
   Testimonials,
   VisualImage,
 } from "@/components/site";
+import { brand } from "@/lib/brand";
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
               tone="paper"
               eyebrow="Nuestra filosofía"
               title="Fuego lento. Sabor real. Hecho en Argentina."
-              subtitle="En The Bear Smoke combinamos la tradición del Texas BBQ con nuestra parrilla argentina. Seleccionamos cortes de calidad, los ahumamos con maderas nobles durante horas y los preparamos para que vos solo tengas que disfrutar."
+              subtitle={`En ${brand.name} combinamos la tradición del Texas BBQ con nuestra parrilla argentina. Seleccionamos cortes de calidad, los ahumamos con maderas nobles durante horas y los preparamos para que vos solo tengas que disfrutar.`}
             />
             <CTAButton href="/blog/guia-ahumado" variant="petrol" className="mt-6">
               Conocé nuestra historia

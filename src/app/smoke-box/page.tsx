@@ -8,6 +8,7 @@ import {
   TrustBadge,
   VisualImage,
 } from "@/components/site";
+import { brand } from "@/lib/brand";
 
 export default function SmokeBoxPage() {
   return (
@@ -53,7 +54,7 @@ export default function SmokeBoxPage() {
             ["Juntadas", "Compartí un momento único con amigos y familia."],
             ["Cumpleaños", "Un regalo diferente para quien disfruta comer bien."],
             ["Regalos", "Sorprendé con una experiencia gourmet."],
-            ["Eventos", "Llevá el sabor de The Bear Smoke a reuniones."],
+            ["Eventos", `Llevá el sabor de ${brand.name} a reuniones.`],
           ].map(([title, text]) => (
             <div key={title} className="vintage-border rounded-[3px] bg-paper p-8 text-center text-charcoal">
               <h3 className="display-title text-2xl">{title}</h3>

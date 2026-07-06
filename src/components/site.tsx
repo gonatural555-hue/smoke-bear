@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
+import { brand } from "@/lib/brand";
 import { blogPosts, products, smokeBoxes, testimonials, type Product } from "@/lib/data";
 import { MobileMenu } from "@/components/mobile-menu";
 
@@ -21,8 +22,8 @@ export function Header() {
       <div className="mx-auto flex max-w-site items-center justify-between gap-4 px-5 py-3 lg:px-10">
         <Link href="/" className="group flex items-center gap-3">
           <SiteLogo className="h-16 w-16" framed={false} />
-          <span className="hidden text-xs uppercase tracking-[0.32em] text-muted-text group-hover:text-cream xl:block">
-            The Bear Smoke
+          <span className="hidden text-[10px] uppercase leading-tight tracking-[0.22em] text-muted-text group-hover:text-cream xl:block">
+            {brand.name}
           </span>
         </Link>
 
@@ -64,9 +65,9 @@ function SiteLogo({ className = "h-16 w-16", framed = true }: { className?: stri
       className={`block overflow-hidden ${
         framed ? "rounded-full border-2 border-copper bg-black-smoke shadow-ember" : ""
       } ${className}`}
-      aria-label="The Bear Smoke"
+      aria-label={brand.name}
     >
-      <Image src="/references/logo.png" alt="The Bear Smoke" width={160} height={160} className="h-full w-full object-cover" priority />
+      <Image src="/references/logo.png" alt={brand.name} width={160} height={160} className="h-full w-full object-cover" priority />
     </span>
   );
 }
@@ -89,14 +90,14 @@ export function Footer() {
             <h3 className="nav-text mb-4 text-xs text-cream">Hablá con nosotros</h3>
             <p className="space-y-2 text-sm text-muted-text">
               <span className="block">221 123 4567</span>
-              <span className="block">@thebear.smoke</span>
+              <span className="block">{brand.instagram}</span>
               <span className="block">La Plata, Buenos Aires</span>
             </p>
           </div>
         </div>
       </div>
       <div className="mx-auto max-w-site border-t border-gold-aged/15 px-5 py-5 text-center text-xs text-muted-text lg:px-10">
-        © 2026 The Bear Smoke. Demo visual para presentación.
+        © 2026 {brand.name}. Demo visual para presentación.
       </div>
     </footer>
   );
@@ -318,7 +319,7 @@ export function InstagramStrip({ light = true }: { light?: boolean }) {
   return (
     <section className={light ? "paper-texture" : "bg-charcoal"}>
       <div className="mx-auto max-w-site px-5 py-10 lg:px-10">
-        <SectionTitle title="Seguinos en Instagram" eyebrow="@thebear.smoke" tone={light ? "paper" : "dark"} />
+        <SectionTitle title="Seguinos en Instagram" eyebrow={brand.instagram} tone={light ? "paper" : "dark"} />
         <div className="mt-8 grid grid-cols-3 gap-3 md:grid-cols-8">
           {Array.from({ length: 8 }).map((_, index) => (
             <VisualImage key={index} src={index % 2 === 0 ? "/references/home.png" : "/references/blog.png"} className="min-h-24" />

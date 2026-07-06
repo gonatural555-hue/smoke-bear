@@ -1,4 +1,5 @@
 import { CTAButton, NewsletterBlock, PageSection, TrustBadge, VisualImage } from "@/components/site";
+import { brand } from "@/lib/brand";
 
 const fields = ["Nombre", "Apellido", "Email", "Teléfono", "Dirección", "Ciudad", "Provincia", "Código postal"];
 
@@ -9,7 +10,7 @@ export default function CheckoutPage() {
         <div className="mb-10 rounded-[3px] border border-gold-aged/20 bg-black-smoke p-8 shadow-ember md:p-14">
           <p className="nav-text text-xs text-copper">Carrito / Checkout / Confirmación</p>
           <h1 className="display-title mt-4 text-5xl text-cream md:text-7xl">Finalizar pedido</h1>
-          <p className="mt-4 max-w-xl text-muted-text">Estás a un paso de disfrutar una experiencia The Bear Smoke.</p>
+          <p className="mt-4 max-w-xl text-muted-text">Estás a un paso de disfrutar una experiencia {brand.name}.</p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_430px]">

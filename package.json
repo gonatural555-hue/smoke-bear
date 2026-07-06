@@ -1,7 +1,7 @@
 {
-  "name": "smoke-bear",
+  "name": "smoke-120-ahumados",
   "version": "1.0.0",
-  "description": "Demo visual para The Bear Smoke, marca argentina de carnes ahumadas estilo Texas BBQ.",
+  "description": "Demo visual para SMOKE 120 AHUMADOS, marca argentina de carnes ahumadas estilo Texas BBQ.",
   "private": true,
   "scripts": {
     "dev": "next dev",

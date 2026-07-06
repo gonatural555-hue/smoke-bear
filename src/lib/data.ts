@@ -138,28 +138,28 @@ export const testimonials = [
 
 export const orders = [
   {
-    id: "#TB2847",
+    id: "#S1202847",
     date: "17 de Julio, 2024",
     status: "Entregado",
     items: "Smoke Box Clásica",
     total: "$59.900",
   },
   {
-    id: "#TB2781",
+    id: "#S1202781",
     date: "2 de Julio, 2024",
     status: "En preparación",
     items: "Smoke Box Familiar",
     total: "$89.900",
   },
   {
-    id: "#TB2710",
+    id: "#S1202710",
     date: "18 de Junio, 2024",
     status: "Enviado",
     items: "Ribs Smoke + Rub Original",
     total: "$49.900",
   },
   {
-    id: "#TB2655",
+    id: "#S1202655",
     date: "2 de Junio, 2024",
     status: "Cancelado",
     items: "Smoke Box Premium",

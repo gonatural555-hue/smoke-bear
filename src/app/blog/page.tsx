@@ -8,6 +8,7 @@ import {
   SectionTitle,
   VisualImage,
 } from "@/components/site";
+import { brand } from "@/lib/brand";
 
 const categories = ["Todos", "Recetas", "Técnicas", "Consejos", "Cortes", "Maridajes", "Historias"];
 
@@ -15,7 +16,7 @@ export default function BlogPage() {
   return (
     <>
       <Hero
-        eyebrow="The Bear Blog"
+        eyebrow={brand.blogName}
         title="Historias alrededor del fuego"
         subtitle="Recetas, técnicas y consejos para sacar el máximo provecho a tus ahumados."
         image="/references/banner.png"

@@ -1,4 +1,4 @@
-# The Bear Smoke
+# SMOKE 120 AHUMADOS
 
 Demo visual en Next.js para presentar en Vercel una marca argentina de carnes ahumadas artesanales con estética Texas BBQ premium.
 

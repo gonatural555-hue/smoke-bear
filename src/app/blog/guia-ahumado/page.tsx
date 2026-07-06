@@ -7,6 +7,7 @@ import {
   SectionTitle,
   VisualImage,
 } from "@/components/site";
+import { brand } from "@/lib/brand";
 
 export default function GuiaAhumadoPage() {
   return (
@@ -36,7 +37,7 @@ export default function GuiaAhumadoPage() {
             </p>
             <h2>El fuego como ingrediente</h2>
             <p>
-              En The Bear Smoke trabajamos con temperaturas estables y humo limpio. La idea no es tapar el sabor de la carne, sino acompañarlo con notas de madera, especias y una textura tierna.
+              En {brand.name} trabajamos con temperaturas estables y humo limpio. La idea no es tapar el sabor de la carne, sino acompañarlo con notas de madera, especias y una textura tierna.
             </p>
             <blockquote className="border-l-4 border-copper bg-cream p-6 text-2xl font-bold text-charcoal">
               El secreto no está en más humo, sino en mejor humo durante el tiempo correcto.

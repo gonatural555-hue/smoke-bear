@@ -7,6 +7,7 @@ import {
   VisualImage,
 } from "@/components/site";
 import { orders } from "@/lib/data";
+import { brand } from "@/lib/brand";
 
 export default function MisPedidosPage() {
   return (
@@ -71,7 +72,7 @@ export default function MisPedidosPage() {
           <aside className="space-y-6">
             <div className="vintage-border rounded-[3px] bg-black-smoke p-7">
               <p className="nav-text text-xs text-copper">Seguimiento del envío</p>
-              <h2 className="display-title mt-3 text-3xl text-cream">Pedido #TB2781</h2>
+              <h2 className="display-title mt-3 text-3xl text-cream">Pedido #{brand.orderPrefix}2781</h2>
               <p className="mt-2 text-sm text-muted-text">Smoke Box Familiar · En preparación</p>
               <div className="mt-6 space-y-5">
                 {["Pedido confirmado", "Preparación", "Despachado", "En camino", "Entregado"].map((step, index) => (
